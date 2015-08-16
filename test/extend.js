@@ -1,43 +1,43 @@
 var test = require('tape');
 var TypedEvent = require('../event');
-var AnimalTypedEvent;
-var CatTypedEvent;
-var VehicleTypedEvent;
+var AnimalEvent;
+var CatEvent;
+var VehicleEvent;
 
-test('can extend TypedEvent -> VehicleTypedEvent', function (t) {
+test('can extend TypedEvent -> VehicleEvent', function (t) {
   t.plan(1);
-  VehicleTypedEvent = TypedEvent.extend();
-  t.ok(typeof VehicleTypedEvent == 'function', 'extended successfully');
+  VehicleEvent = TypedEvent.extend();
+  t.ok(typeof VehicleEvent == 'function', 'extended successfully');
 });
 
-test('can extend TypedEvent -> AnimalTypedEvent', function (t) {
+test('can extend TypedEvent -> AnimalEvent', function (t) {
   t.plan(1);
-  AnimalTypedEvent = TypedEvent.extend();
-  t.ok(typeof AnimalTypedEvent == 'function', 'extended successfully');
+  AnimalEvent = TypedEvent.extend();
+  t.ok(typeof AnimalEvent == 'function', 'extended successfully');
 });
 
-test('can create an instance of the AnimalTypedEvent', function (t) {
+test('can create an instance of the AnimalEvent', function (t) {
   var evt;
 
   t.plan(3);
-  t.ok(evt = new AnimalTypedEvent(), 'created AnimalTypedEvent');
-  t.ok(evt instanceof AnimalTypedEvent, 'is a AnimalTypedEvent');
+  t.ok(evt = new AnimalEvent(), 'created AnimalEvent');
+  t.ok(evt instanceof AnimalEvent, 'is a AnimalEvent');
   t.ok(evt instanceof TypedEvent, 'is a TypedEvent');
 });
 
-test('extend AnimalTypedEvent -> CatTypedEvent', function (t) {
+test('extend AnimalEvent -> CatEvent', function (t) {
   t.plan(1);
-  CatTypedEvent = TypedEvent.extend(AnimalTypedEvent);
-  t.ok(typeof CatTypedEvent == 'function', 'extended');
+  CatEvent = TypedEvent.extend(AnimalEvent);
+  t.ok(typeof CatEvent == 'function', 'extended');
 });
 
-test('an instance of CatTypedEvent is a CatTypedEvent, AnimalTypedEvent + TypedEvent', function (t) {
+test('an instance of CatEvent is a CatEvent, AnimalEvent + TypedEvent', function (t) {
   var evt;
 
   t.plan(5);
-  t.ok(evt = new CatTypedEvent(), 'created CatTypedEvent');
-  t.ok(evt instanceof CatTypedEvent, 'is a CatTypedEvent');
-  t.ok(evt instanceof AnimalTypedEvent, 'is an AnimalTypedEvent');
+  t.ok(evt = new CatEvent(), 'created CatEvent');
+  t.ok(evt instanceof CatEvent, 'is a CatEvent');
+  t.ok(evt instanceof AnimalEvent, 'is an AnimalEvent');
   t.ok(evt instanceof TypedEvent, 'is a TypedEvent');
-  t.notOk(evt instanceof VehicleTypedEvent, 'is not a VehicleTypedEvent');
+  t.notOk(evt instanceof VehicleEvent, 'is not a VehicleEvent');
 });
