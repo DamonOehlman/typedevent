@@ -1,1 +1,2 @@
 require('./extend');
+require('./emit');
