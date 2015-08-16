@@ -1,0 +1,26 @@
+{
+  "name": "typedevent",
+  "version": "1.0.0",
+  "description": "An attempt at getting type-checked events when combined with something like closure-compiler",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test/all.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DamonOehlman/typedevent.git"
+  },
+  "keywords": [
+    "eventemitter",
+    "closure-compiler"
+  ],
+  "author": "Damon Oehlman <damon.oehlman@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DamonOehlman/typedevent/issues"
+  },
+  "homepage": "https://github.com/DamonOehlman/typedevent#readme"
+}
