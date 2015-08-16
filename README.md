@@ -4,7 +4,7 @@ This is a package that attempts to provide a construct for event signals that ar
 
 [![NPM](https://nodei.co/npm/typedevent.png)](https://nodei.co/npm/typedevent/)
 
-[![bitHound Score](https://www.bithound.io/github/DamonOehlman/typedevent/badges/score.svg)](https://www.bithound.io/github/DamonOehlman/typedevent) 
+[![Build Status](https://api.travis-ci.org/DamonOehlman/typedevent.svg?branch=master)](https://travis-ci.org/DamonOehlman/typedevent) [![bitHound Score](https://www.bithound.io/github/DamonOehlman/typedevent/badges/score.svg)](https://www.bithound.io/github/DamonOehlman/typedevent) 
 
 ## License(s)
 
