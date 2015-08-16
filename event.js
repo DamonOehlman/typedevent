@@ -1,7 +1,8 @@
 /**
  * @constructor
+ * @param {Object=} options
  */
-var TypedEvent = module.exports = function () {};
+var TypedEvent = module.exports = function (options) {};
 
 /**
  * @param  {function(new:TypedEvent)=} baseCls
@@ -10,9 +11,11 @@ var TypedEvent = module.exports = function () {};
 TypedEvent.extend = function (baseCls) {
   /**
    * @constructor
-   * @param {...} args
+   * @param {Object=} options
    */
-  function CustomTypedEvent() {}
+  function CustomTypedEvent(options) {
+    TypedEvent.call(this, options);
+  }
 
   CustomTypedEvent.prototype = Object.create((baseCls || TypedEvent).prototype);
   CustomTypedEvent.prototype.constructor = CustomTypedEvent;

@@ -1,1 +1,1 @@
-require('./inherit-single');
+require('./extend');
